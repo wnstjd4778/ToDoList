@@ -31,7 +31,15 @@ const getTodayTodo = async (req, res) => {
         .catch(err => res.send(err));
 }
 
+//해당 할일 중요 체크하기
+const updateImportantById = async (req, res) => {
+    await todo.findOneAndUpdate({'_id':req.params.id}, {'important': true}) // 이거 true -> false or false-> true로 바꿔야함
+        .then(todo => res.send(todo))
+        .catch(err => res.send(err));
+}
+
 exports.createTodo = createTodo;
 exports.updateTodo = updateTodo;
 exports.deleteTodo = deleteTodo;
 exports.getTodayTodo = getTodayTodo;
+exports.updateImportantById = updateImportantById;
