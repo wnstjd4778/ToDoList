@@ -91,7 +91,7 @@ todo리스트
                 "__v": 0
             }
 
-* (get) localhost:port/todo/:day 해당 날짜의 할일 모두 가져오기
+* (get) localhost:port/todo/all/:day 해당 날짜의 할일 모두 가져오기
 
     * 응답 예
 

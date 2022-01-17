@@ -8,7 +8,8 @@ const passport = require('passport');
 const connect = require('./schemas');
 
 const app = express();
-
+app.use(passport.initialize());
+app.use(passport.session());
 app.set('port', process.env.PORT || 8080);
 connect();
 app.use(morgan('dev')); // 로그

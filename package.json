@@ -23,6 +23,7 @@
     "mongoose": "^6.1.6",
     "morgan": "^1.10.0",
     "passport": "^0.5.2",
+    "passport-google-oauth2": "^0.2.0",
     "passport-kakao": "^1.0.1"
   },
   "devDependencies": {
