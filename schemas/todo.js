@@ -1,7 +1,13 @@
 const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
 const todoSchema = new mongoose.Schema({
     
+    user_email: {
+        type: String,
+        ref: 'User',
+        required: true
+    },
     comment: {
         type: String,
         required: true,
@@ -13,6 +19,14 @@ const todoSchema = new mongoose.Schema({
     completed: {
         type: Boolean,
         default: false,
+    },
+    year: {
+        type: String,
+        required: true,
+    },
+    month: {
+        type: String,
+        required: true,
     },
     day: {
         type: String,

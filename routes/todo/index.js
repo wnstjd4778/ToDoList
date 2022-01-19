@@ -1,14 +1,16 @@
 const router = require('express').Router();
 const todo = require('../../schemas/todo');
 const controller = require('./controller');
-const passport = require('passport');
+const {verifyToken} = require('../../middlewares/authorization');
 
-router.post('/', controller.createTodo);
-router.delete('/:id', controller.deleteTodo);
-router.put('/:id', controller.updateTodo);
-router.get('/today', controller.getTodayTodo);
-router.get('/important/:id', controller.updateImportantById);
-router.get('/completed/:id', controller.updateCompletedById);
-router.get('/all/:date', controller.getTodoByDay);
-router.get('/kakao', passport.authenticate('kakao'));
+
+router.post('/', verifyToken, controller.createTodo);
+router.delete('/:id', verifyToken, controller.deleteTodo);
+router.put('/:id', verifyToken, controller.updateTodo);
+router.get('/today', verifyToken, controller.getTodayTodo);
+router.get('/important/:id', verifyToken, controller.updateImportantById);
+router.get('/completed/:id', verifyToken, controller.updateCompletedById);
+router.get('/all', verifyToken, controller.getTodoByDay);
+
+
 module.exports = router;
