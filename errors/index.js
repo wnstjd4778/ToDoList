@@ -23,7 +23,6 @@ const errors = {
     FORBIDDEN: [403, '권한이 없는 요청입니다.'],
   
     // 404 Errors
-    CONTEST_NOT_FOUND: [404, '찾을 수 없는 대회입니다.'],
     NOT_FOUND: [404, '찾을 수 없는 요청입니다.'],
   
     // 500 Errors
