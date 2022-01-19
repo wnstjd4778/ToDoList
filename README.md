@@ -211,7 +211,7 @@ todo리스트
                 }
             }
 
-    * 토큰을 받으면 매 요청의 헤더에 authorization 필드에 값을 토큰 값을 넣어서 보내면 로그인이 됩니다. 
+    * 토큰을 받으면 매 요청의 헤더에 authorization 필드의 값을 토큰 값을 넣어서     보내면 로그인 처리가 됩니다. 
 * (post) localhost:port/auth/signup/checkEmail 중복 이메일 체크하기
     * 요청
 
@@ -295,7 +295,7 @@ todo리스트
                 "data": {
                     "email": "wnstjd4778"
                 }
-            }
+            }a
 
 
 
